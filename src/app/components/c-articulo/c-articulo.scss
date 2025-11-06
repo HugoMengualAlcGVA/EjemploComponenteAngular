@@ -1,0 +1,85 @@
+
+$container-max-width: 1140px;
+$container-padding: 1rem;
+$container-padding-md: 1.5rem;
+$container-padding-lg: 2rem;
+$container-bg: #ffffff;
+$container-border: 1px solid rgba(0, 0, 0, 0.06);
+$container-radius: 0.5rem;
+$container-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+$container-shadow-elevated: 0 6px 20px rgba(0, 0, 0, 0.12);
+$container-gap: 1rem;
+$transition: 180ms ease-in-out;
+
+.c-articulo {
+  box-sizing: border-box;
+  width: 200pt;
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $container-padding;
+  background: $container-bg;
+  border: $container-border;
+  border-radius: $container-radius;
+  box-shadow: $container-shadow;
+  color: inherit;
+  display: block;
+  transition: box-shadow $transition, transform $transition;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &__img{
+    width: 100%;
+    height: auto;
+  }
+
+  &__nombre{
+    font-size: 16pt;
+    color: black;
+  }
+
+  &__precios{
+    display: block;
+  }
+
+  &__precio{
+    &--actual{
+        font-weight: 600;
+        font-size: 18px;
+        color: red;
+    }
+
+    &--anterior{
+        font-size: 14px;
+        color: gray;
+        text-decoration: line-through;
+      }
+
+    &--envio-gratis{
+        font-weight: 600;
+        color: green;
+    }
+  } 
+
+  $valoraciones-font-size: 14pt;
+
+  &__valoraciones{
+    font-size: $valoraciones-font-size;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__star{
+    font-size: ($valoraciones-font-size+2pt);
+  }
+
+  &__costes{
+    font-size: $valoraciones-font-size;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}

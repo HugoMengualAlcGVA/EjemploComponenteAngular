@@ -1,9 +1,9 @@
 import { Component, HostBinding, Input } from '@angular/core';
-import { DatePipe, CurrencyPipe, CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'c-articulo',
-  imports: [DatePipe, CurrencyPipe, CommonModule],
+  imports: [CommonModule],
   templateUrl: './c-articulo.html',
   styleUrl: './c-articulo.scss',
 })

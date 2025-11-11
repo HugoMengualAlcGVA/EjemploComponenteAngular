@@ -11,6 +11,9 @@ $container-shadow-elevated: 0 6px 20px rgba(0, 0, 0, 0.12);
 $container-gap: 1rem;
 $transition: 180ms ease-in-out;
 
+$valoraciones-font-size: 14pt;
+
+
 .c-articulo {
   box-sizing: border-box;
   width: 200pt;
@@ -61,8 +64,6 @@ $transition: 180ms ease-in-out;
     }
   } 
 
-  $valoraciones-font-size: 14pt;
-
   &__valoraciones{
     font-size: $valoraciones-font-size;
     width: 100%;
@@ -81,5 +82,28 @@ $transition: 180ms ease-in-out;
     display: flex;
     align-items: center;
     gap: 15px;
+  }
+
+  &__opiniones {
+    color: #333333;
+    font-size: 13px;
+  }
+  &__entrega {
+    font-size: 13px;
+    font-weight: 700;
+ 
+    &--positivo {
+      color: #008000;
+    }
+ 
+    &--negativo {
+      color: #333333;
+    }
+  }
+ 
+  &__otras-opciones {
+    font-size: 13px;
+    color: #777;
+    font-weight: 600;
   }
 }

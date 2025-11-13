@@ -17,4 +17,14 @@ export class CArticulo {
   @Input() fechaEntrega: Date = new Date();
   @Input() precioEnvio: number = 0;
   @Input() otrosEnvios: boolean = false;
+
+  isToday!: boolean;
+
+  ngOnInit(){
+    this.isToday = this.fechaEntrega.getDate == new Date().getDate;
+    console.log(this.isToday);
+    console.log(this.fechaEntrega);
+    
+    
+  }
 }

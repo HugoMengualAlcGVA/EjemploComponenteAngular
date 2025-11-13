@@ -15,10 +15,14 @@
         🚚
         @if (precioEnvio==0) {
             <span class="c-articulo__precio--envio-gratis">Entrega Gratis</span>
+        }@else {
+            <span class="c-articulo__precio--envio-gratis">{{precioEnvio| currency}}</span>   
+        }
+        @if (isToday){
+            <span class="c-articulo__precio">Recibelo Mañana</span>
+        }@else{
             <span class="c-articulo__precio">{{fechaEntrega| date: 'shortDate'}}</span>
         }
-        <span class="c-articulo__precio--envio-gratis">{{precioEnvio| currency}}</span>
-        <span class="c-articulo__precio">Recibelo Mañana</span>
     </p>
     <p class="">Otras opciones disponibles</p>
 </div>

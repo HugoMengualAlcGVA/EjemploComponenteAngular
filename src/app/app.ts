@@ -11,6 +11,8 @@ import { CArticulo } from "./components/c-articulo/c-articulo";
 export class App {
   protected readonly title = signal('EjemploComponenteAngular');
 
-  fechaEntrega: Date = new Date('2025-12-23');
+  fechaEntrega1: Date = new Date('2025-12-23');
+  fechaEntrega2: Date = new Date();
+  fechaEntrega3: Date = new Date('2025-6-14');
   
 }

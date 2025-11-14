@@ -7,22 +7,28 @@
         <span class="c-articulo__precio--anterior">{{precioAnterior| currency}}</span>
     </p>
     <p class="c-articulo__valoraciones">
-        <span class="c-articulo__valoracion">{{valoracion}}</span>
+        <span class="c-articulo__valoraciones--puntiacion">{{valoracion}}/5</span>
         <span class="c-articulo__star">⭐</span>
-        <span class="c-articulo__opiniones">{{numeroOpiniones}} opiniones</span>
+        <span class="c-articulo__valoraciones">{{numeroOpiniones}} opiniones</span>
     </p>
-    <p class="c-articulo__costes">
+    <p class="c-articulo__costes" style="background-color: aquamarine;">
         🚚
         @if (precioEnvio==0) {
-            <span class="c-articulo__precio--envio-gratis">Entrega Gratis</span>
+            <span class="c-articulo__entrega c-articulo__entrega--envio-gratis">Entrega Gratis</span>
         }@else {
-            <span class="c-articulo__precio--envio-gratis">{{precioEnvio| currency}}</span>   
+            <span class="c-articulo__entrega">{{precioEnvio| currency}}</span>   
         }
         @if (isToday){
-            <span class="c-articulo__precio">Recibelo Mañana</span>
+            <span class="c-articulo__entrega c-articulo__entrega--envio-gratis">Recibelo Mañana</span>
         }@else{
-            <span class="c-articulo__precio">{{fechaEntrega| date: 'shortDate'}}</span>
+            <div class="c-articulo__entrega">{{fechaEntrega| date: 'shortDate'}}</div>
         }
+
+       <!-- <div class="c-articulo__entrega">🚚 
+            <span>{{precioEnvio | currency}}</span>
+            {{fechaEntrega | date: 'shortDate'}}
+        </div>
+        -->
     </p>
-    <p class="">Otras opciones disponibles</p>
+    <p class="c-articulo__opiniones">Otras opciones disponibles</p>
 </div>

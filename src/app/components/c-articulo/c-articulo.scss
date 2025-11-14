@@ -24,8 +24,6 @@ $transition: 180ms ease-in-out;
   box-sizing: border-box;
   width: 200pt;
   max-width: $container-max-width;
-  margin-left: var(--c-articulo-margin);
-  margin-right: var(--c-articulo-margin);
   padding: var(--c-articulo-padding);
   background: $container-bg;
   border: $container-border;
@@ -67,12 +65,6 @@ $transition: 180ms ease-in-out;
         color: gray;
         text-decoration: line-through;
       }
-
-    &--envio-gratis{
-        font-size: var(--c-articulo-font-size-grande);
-        font-weight: 600;
-        color: green;
-    }
   } 
 
   &__valoraciones{
@@ -83,6 +75,12 @@ $transition: 180ms ease-in-out;
     gap: 15px;
   }
 
+  &__puntuacion{
+    font-size: var(--c-articulo-font-size-default);
+    color: #5a5a5a;
+    font-weight: 600;
+  }
+
   &__star{
     font-size: (var(--c-articulo-font-size-default)+2);
   }
@@ -90,26 +88,25 @@ $transition: 180ms ease-in-out;
   &__costes{
     font-size: --c-articulo-font-size-default;
     width: 100%;
+    flex-direction: row;
     display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
     align-items: center;
     gap: 15px;
   }
-
-  &__opiniones {
-    color: #333333;
-    font-size: var(--c-articulo-font-size-default);
-  }
   &__entrega {
     font-size: var(--c-articulo-font-size-default);
-    font-weight: 700;
+    font-weight: 500;
  
-    &--positivo {
-      color: #008000;
+    &--envio-gratis{
+      font-weight: 700;
+      color: green;
     }
- 
-    &--negativo {
-      color: #333333;
-    }
+  }
+
+  &__entrega span{
+    color: red;
   }
  
   &__otras-opciones {

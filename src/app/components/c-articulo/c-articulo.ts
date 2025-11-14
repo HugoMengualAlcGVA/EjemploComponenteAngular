@@ -20,11 +20,19 @@ export class CArticulo {
 
   isToday!: boolean;
 
+  detalleEntrega: string = "";
+
   ngOnInit(){
-    this.isToday = this.fechaEntrega.getDate == new Date().getDate;
+    this.isToday = this.fechaEntrega.setHours(0,0,0,0) == new Date().setHours(0,0,0,0);
     console.log(this.isToday);
     console.log(this.fechaEntrega);
-    
-    
   }
+
+  /*fillDetalleEntrega(){
+    if(this.precioEnvio == 0){
+      this.detalleEntrega+="Envio Gratis";
+    }else{
+      this.detalleEntrega+=this.precioEnvio.toString;
+    }
+  }*/
 }

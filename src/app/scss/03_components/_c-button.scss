@@ -1,0 +1,38 @@
+.boton {
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 6px;
+
+    margin: 10pt;
+
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+
+
+    border-color: #0056b8;
+    background-color: #0056b8;
+    color: #ffffff;
+}
+
+.boton--funcion-normal {
+    border-color: #0056b8;
+    background-color: #0056b8;
+    color: #ffffff;
+}
+
+.boton--funcion-alternativa {
+    border-color: #ed8936;
+    background-color: #ed8936;
+    color: #ffffff;
+}
+
+.boton--funcion-peligrosa {
+    border-color: #c53030;
+    background-color: #c53030;
+    color: #ffffff;
+}

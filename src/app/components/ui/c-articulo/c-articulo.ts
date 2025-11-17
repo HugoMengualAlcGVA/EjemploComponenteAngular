@@ -18,16 +18,17 @@ export class CArticulo {
   @Input() precioEnvio: number = 0;
   @Input() otrosEnvios: boolean = false;
 
-  isToday!: boolean;
-
   detalleEntrega: string = "";
 
-  ngOnInit(){
-    this.isToday = this.fechaEntrega.setHours(0,0,0,0) == new Date().setHours(0,0,0,0);
-    console.log(this.isToday);
-    console.log(this.fechaEntrega);
-  }
+  isTomorrow!: boolean;
 
+  tomorrowDate = new Date(new Date().getDate() + 1, new Date().getMonth(), new Date().getFullYear());
+  //detalleEntrega: string = "";
+
+  ngOnInit() {
+    this.isTomorrow = this.fechaEntrega.setHours(0, 0, 0, 0) == this.tomorrowDate.setHours(0, 0, 0, 0);
+    console.log(this.tomorrowDate);
+  }
   /*fillDetalleEntrega(){
     if(this.precioEnvio == 0){
       this.detalleEntrega+="Envio Gratis";

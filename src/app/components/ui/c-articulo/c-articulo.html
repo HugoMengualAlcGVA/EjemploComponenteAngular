@@ -18,10 +18,10 @@
         }@else {
             <span class="c-articulo__entrega">{{precioEnvio| currency}}</span>   
         }
-        @if (isToday){
+        @if (isTomorrow){
             <span class="c-articulo__entrega c-articulo__entrega--envio-gratis">Recibelo Mañana</span>
         }@else{
-            <div class="c-articulo__entrega">{{fechaEntrega| date: 'shortDate'}}</div>
+            <div class="c-articulo__entrega">Recibelo el {{fechaEntrega| date: 'fullDate'}}</div>
         }
 
        <!-- <div class="c-articulo__entrega">🚚 

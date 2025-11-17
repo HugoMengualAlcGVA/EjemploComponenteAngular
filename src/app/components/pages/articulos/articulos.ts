@@ -9,6 +9,6 @@ import { CArticulo } from "../../ui/c-articulo/c-articulo";
 })
 export class Articulos {
   fechaEntrega1: Date = new Date('2025-12-23');
-  fechaEntrega2: Date = new Date();
+  fechaEntrega2: Date = new Date(new Date().getDate() + 1, new Date().getMonth(), new Date().getFullYear());
   fechaEntrega3: Date = new Date('2025-6-14');
 }
